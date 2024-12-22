@@ -1,0 +1,96 @@
+<template>
+  <div class="relative bg-gray-800 py-16 sm:py-24 lg:py-20">
+    <div
+      class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8"
+    >
+      <h2 class="text-lg font-semibold text-cyan-300">Lorem ipsum dolor sit</h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        Congue quisque egestas diam in arcu
+      </p>
+      <p class="mx-auto mt-5 max-w-prose text-xl text-gray-400">
+        Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan
+        in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id
+        viverra nulla.
+      </p>
+      <div class="mt-12">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div v-for="feature in features" :key="feature.name" class="pt-6">
+            <div class="flow-root rounded-lg bg-gray-100 px-6 pb-8">
+              <div class="-mt-6">
+                <div>
+                  <span
+                    class="inline-flex items-center justify-center rounded-md bg-cyan-500 p-3 shadow-lg"
+                  >
+                    <component
+                      :is="feature.icon"
+                      class="h-6 w-6 text-white"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+                <h3
+                  class="mt-8 text-lg font-medium tracking-tight text-gray-900"
+                >
+                  {{ feature.name }}
+                </h3>
+                <p class="mt-5 text-base text-gray-500">
+                  {{ feature.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import {
+  ArrowPathIcon,
+  CloudArrowUpIcon,
+  CogIcon,
+  LockClosedIcon,
+  ServerIcon,
+  ShieldCheckIcon,
+} from "@heroicons/vue/24/outline";
+
+const features = [
+  {
+    name: "Lorem ipsum dolor",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    icon: CloudArrowUpIcon,
+  },
+  {
+    name: "Lorem ipsum dolor",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    icon: LockClosedIcon,
+  },
+  {
+    name: "Lorem ipsum dolor",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Lorem ipsum dolor",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: "Lorem ipsum dolor",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    icon: CogIcon,
+  },
+  {
+    name: "Lorem ipsum dolor",
+    description:
+      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+    icon: ServerIcon,
+  },
+];
+</script>

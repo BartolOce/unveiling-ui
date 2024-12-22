@@ -1,0 +1,20 @@
+/* WebKit browsers */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Internet Explorer */
+html {
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar but maintain ability to scroll */
+.scroll-container {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
